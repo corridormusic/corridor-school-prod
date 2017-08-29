@@ -6,14 +6,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Corridor is an interactive, game-based music theory, ear training, and keyboard program created by top music education professionals, based on the idea that to learn music you must see it, hear it, and play it.">
+<meta name="description" content="Corridor is an interactive, game-based music theory and ear training app created by leaders in popular music education, based on the idea that to learn music you must see it, hear it, and play it.">
 <meta name="author" content="Corridor Music, LLC">
 <link rel="icon" href="static/img/favicon.ico">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@corridor_music">
 <meta name="twitter:title" content="Corridor Music - Your pathway to learning music.">
-<meta name="twitter:description" content="Corridor is an interactive, game-based music theory, ear training, and keyboard program created by top music education professionals, based on the idea that to learn music you must see it, hear it, and play it.">
+<meta name="twitter:description" content="Corridor is an interactive, game-based music theory and ear training app created by leaders in popular music education, based on the idea that to learn music you must see it, hear it, and play it.">
 <meta name="twitter:creator" content="@corridor_music">
 <meta name="twitter:image" content="http://corridormusic.com/static/img/social.jpg">
 
@@ -21,7 +21,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://corridormusic.com/" />
 <meta property="og:image" content="http://corridormusic.com/static/img/social.jpg" />
-<meta property="og:description" content="Corridor is an interactive, game-based music theory, ear training, and keyboard program created by top music education professionals, based on the idea that to learn music you must see it, hear it, and play it." />
+<meta property="og:description" content="Corridor is an interactive, game-based music theory and ear training app created by leaders in popular music education, based on the idea that to learn music you must see it, hear it, and play it." />
 <meta property="og:site_name" content="Corridor Music" />
 <meta property="fb:admins" content="484005745142647" />
 
@@ -40,9 +40,20 @@
 
   ga('create', 'UA-89704639-1', 'auto');
   ga('send', 'pageview');
+
+  function getQueryParam(key) {
+      var matches = window.location.search.match('(\\?|&)' + key + '\\=([^&]*)');
+      return decodeURIComponent(matches ? matches.pop() : '');
+  }
+
+  var referrer = getQueryParam('utm_source');
+  if (referrer) {
+      var expiration = new Date(Date.now() + (7 * 24 * 60 * 60 * 1000));
+      document.cookie='cm_referrer=' + referrer + '; expires=' + expiration.toUTCString() + '; path=/; domain=corridormusic.com';
+  }
 </script>
 
-    <link href="/app.bundle.css?f484fe3a5338c9f9e1b7" rel="stylesheet"></head>
+    <link href="/app.bundle.css?43686200cd53d4ce1bc8" rel="stylesheet"></head>
     <body>
         <div class="static container-fluid text-center">
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -60,5 +71,5 @@
                 </div>
             </div>
         </div>
-    <script type="text/javascript" src="/vendor.bundle.js?f484fe3a5338c9f9e1b7"></script><script type="text/javascript" src="/app.bundle.js?f484fe3a5338c9f9e1b7"></script></body>
+    <script type="text/javascript" src="/vendor.bundle.js?43686200cd53d4ce1bc8"></script><script type="text/javascript" src="/app.bundle.js?43686200cd53d4ce1bc8"></script></body>
 </html>
